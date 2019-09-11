@@ -1,12 +1,9 @@
 package com.umair.exercises;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map.Entry;
+
 
 public class Anagrams {
 
@@ -24,7 +21,9 @@ public class Anagrams {
 		System.out.println(str2);
 		str1=sortString(str1);
 		str2=sortString(str2);
-		if(str1.equals(str2))return true;
+		if(str1.equals(str2)) {
+			return true;
+		}
 		return false;
 	}
 
@@ -42,8 +41,8 @@ public class Anagrams {
 		str2=str2.replaceAll("\\W+","").toLowerCase();
 		System.out.println(str1);
 		System.out.println(str2);
-		HashMap<Character,Integer> map1=new HashMap<Character,Integer>();
-		HashMap<Character,Integer> map2=new HashMap<Character,Integer>();
+		HashMap<Character,Integer> map1=new HashMap<>();
+		HashMap<Character,Integer> map2=new HashMap<>();
 		for(char c:str1.toCharArray()) {
 			if(map1.containsKey(c)) {
 				map1.put(c, map1.get(c)+1);
